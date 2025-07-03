@@ -1,0 +1,185 @@
+/* Importing Google Fonts - Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#7ecfea, #027398);
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 410px;
+  border-radius: 10px;
+  background: linear-gradient(#449ab7, #d6a67c);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/clouds.png");
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+}
+
+.search-section .search-form {
+  height: 54px;
+  width: 100%;
+  position: relative;
+}
+
+.search-section .search-form span {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.search-section .search-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 20px 0 50px;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.2s ease;
+}
+
+.search-section .search-input:focus {
+  border-color: #027398;
+}
+
+.search-section .search-input::placeholder {
+  color: #ddd;
+  text-transform: none;
+}
+
+.search-section .location-button {
+  height: 54px;
+  width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.5s ease;
+}
+
+.search-section .location-button span {
+  font-size: 1.3rem;
+}
+
+.search-section .location-button:hover {
+  color: #027398;
+  border-color: #404040;
+}
+
+.weather-section :where(h2, p) {
+  color: #404040;
+}
+
+.weather-section .current-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 50px;
+}
+
+.current-weather .weather-icon {
+  width: 140px;
+  aspect-ratio: 1;
+}
+
+.current-weather .temperature {
+  margin: 18px 0;
+  display: flex;
+  font-size: 3.38rem;
+}
+
+.current-weather .temperature span {
+  font-size: 1.56rem;
+  font-weight: 400;
+  margin: 5px 0 0 2px;
+}
+
+.current-weather .description {
+  font-size: 1.25rem;
+}
+
+.hourly-forecast {
+  padding: 16px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hourly-forecast .weather-list {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: thin;
+  padding-bottom: 16px;
+  margin-bottom: -16px;
+  scrollbar-color: transparent transparent;
+}
+
+.hourly-forecast:hover .weather-list {
+  scrollbar-color: #ddd transparent;
+}
+
+.hourly-forecast .weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.hourly-forecast .weather-item .weather-icon {
+  width: 28px;
+  aspect-ratio: 1;
+}
+
+.no-results{
+  color:#404040;
+  display:flex;
+  flex-direction:column;
+  padding:60px 40px;
+  align-items: center;
+  gap:20px;
+}
